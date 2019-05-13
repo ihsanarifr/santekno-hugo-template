@@ -1476,7 +1476,7 @@ ul#additional_links li:after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .hero_single.version_4 {
-  height: 620px;
+  height: 400px;
   background: #004dda url(../img/pattern_1.svg) center bottom repeat-x;
 }
 .hero_single.version_4 .wrapper {

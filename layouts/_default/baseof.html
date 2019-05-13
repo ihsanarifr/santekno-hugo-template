@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+<html lang="{{ .Lang }}">
+   {{ partial "head-meta.html" . }}
+   
+   <link rel="canonical" href="{{ .Permalink }}">
+
+   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+   
+   <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
+   <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+   <link href="{{ .Site.BaseURL }}css/color-orange.css" rel="stylesheet">
+   <link href="{{ .Site.BaseURL }}css/vendors.css" rel="stylesheet">
+   <link type="textcss" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+   <!-- YOUR CUSTOM CSS -->
+   <link href="{{ .Site.BaseURL }}css/blog.css" rel="stylesheet">
+   <link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">
+   
+   {{- partial "head.html" . -}}
+   
+   <body>
+      <div id="page">
+         <header class="header menu_fixed custom">
+            {{- partial "header.html" . -}}
+         </header>
+         <main>
+            {{- block "main" . }}{{- end }}
+         </main>
+         <footer>
+            {{- partial "footer.html" . -}}
+         </footer>
+      </div>
+   </body>
+   <div id="toTop"></div><!-- Back to top button -->
+   <script src="https://ddth2wdm6pubv.cloudfront.net/public/js/common_scripts.js"></script>
+	<script src="https://ddth2wdm6pubv.cloudfront.net/public/js/functions.js"></script>
+   <script src="https://ddth2wdm6pubv.cloudfront.net/public/assets/validate.js"></script>
 </html>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+   {{ $truncate := default true .Site.Params.truncate }}
+   {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+   {{ if $truncate }}
+      {{- partial "search-home.html" }}
+      <div class="container margin_60_35">
+         <div class="row">
+         {{ range $paginator.Pages }}
+            {{ .Render "summary" }}
+         {{ end }}
+         </div>
+      </div>
+   {{ else }}
+      <div class="container margin_60_35">
+         {{ .Render "content" }}
+      </div>
+   {{ end }}
+{{ end }}
