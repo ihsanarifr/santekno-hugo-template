@@ -4256,14 +4256,9 @@ section#reviews {
 
 .box_detail {
   background-color: #fff;
-  padding: 25px 25px 15px 25px;
-  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
+  padding: 25px 25px 15px 25px;  
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,.125);
   margin-bottom: 30px;
 }
 .box_detail .price {

@@ -10,6 +10,7 @@
    <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
    <link href="{{ .Site.BaseURL }}css/color-orange.css" rel="stylesheet">
    <link href="{{ .Site.BaseURL }}css/vendors.css" rel="stylesheet">
+   <link href="{{ .Site.BaseURL }}css/prism.css" rel="stylesheet">
    <link type="textcss" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
    <!-- YOUR CUSTOM CSS -->
@@ -20,7 +21,7 @@
    
    <body>
       <div id="page">
-         <header class="header menu_fixed custom">
+         <header class="header_in is_sticky menu_fixed">
             {{- partial "header.html" . -}}
          </header>
          <main>
@@ -35,4 +36,5 @@
    <script src="https://ddth2wdm6pubv.cloudfront.net/public/js/common_scripts.js"></script>
 	<script src="https://ddth2wdm6pubv.cloudfront.net/public/js/functions.js"></script>
    <script src="https://ddth2wdm6pubv.cloudfront.net/public/assets/validate.js"></script>
+   <script src="/js/prism.js"></script>
 </html>
