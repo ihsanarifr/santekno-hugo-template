@@ -1,34 +1,107 @@
 {{ $featured_image := .Params.images }}
-<div class="singlepost">
-   <div class="mb-3">
-      <img src="/img/avatar.jpg" class="rounded-circle" width="32" height="32" alt="author" loading="lazy">
-      <a class="align-middle text-dark" href="{{ .Permalink }}" target="_blank" rel="noopener"> Ihsan Arif</a>
-      <small class="align-middle text-muted">
-         ·{{ .ReadingTime}} minutes read
-      </small>
+<div class="col-lg-8">
+   <div class="singlepost">
+      <div class="mb-3">
+         <img src="/img/avatar.jpg" class="rounded-circle" width="32" height="32" alt="author" loading="lazy">
+         <a class="align-middle text-dark" href="{{ .Permalink }}" target="_blank" rel="noopener"> Ihsan Arif</a>
+         <small class="align-middle text-muted">
+            ·{{ .ReadingTime}} minutes read
+         </small>
+      </div>
+      <h1>{{ .Title | markdownify }}</h1>
+      <div class="postmeta">
+         <ul>
+            <li>
+               {{ range .Params.tags }}
+                  <span class="badge badge-success"> #<a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{- . -}}</a></span>
+               {{ end }}
+            </li>
+         </ul>
+      </div>
+      <!-- /post meta -->
+      <div class="post-content">
+         {{ if $featured_image }}
+            <img class="img-fluid" src="{{ .Site.Params.cloudfront }}/images/{{ $featured_image }}" alt="" width="100%">
+         {{ else }}
+            <img class="img-fluid" src="/img/blog-single.jpg" alt="" width="100%">
+         {{ end }}
+         <p></p>
+         {{ .Content }}
+      </div>
+      <hr />
+      <div class="post-content">
+         <div class="row">
+            <div class="col-md-6">
+               {{ with .PrevInSection }}
+                  <a class="previous" href="{{.Permalink}}"><- {{.Title}}</a>
+               {{ end }}
+            </div>
+            <div class="col-md-6">
+               {{ with .NextInSection }}
+                  <a class="next" href="{{.Permalink}}"> {{.Title}} -></a>
+               {{ end }}
+            </div>
+            <ul>
+         </div>
+      </div>
+      <!-- /post -->
    </div>
-   <h1>{{ .Title | markdownify }}</h1>
-   <div class="postmeta">
-      <ul>
-         <li>
-            {{ range .Params.tags }}
-               <span class="badge badge-success"> #<a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{- . -}}</a></span>
+   <div class="singlepost">
+         {{ template "_internal/disqus.html" . }}
+   </div>
+</div>
+
+<aside class="col-lg-4">
+   <div class="widget">
+      <div class="list-group">
+         <div class="list-group-item"><h4>Artikel Terbaru</h4></div>
+         <ul>
+            {{ range where .Site.Pages "Section" "post" | first 5 }}
+            <a
+            href="{{ .RelPermalink }}"
+            class="list-group-item list-group-item-action"
+            >
+            <div class="row">
+               <div class="col-12">
+                  {{ if .Params.images }}
+                     <img 
+                     class="rounded float-left mr-3" 
+                     src="{{ .Site.Params.cloudfront }}/images/{{ .Params.images }}" 
+                     data-sizes="auto"
+                     width="70"
+                     height="70"
+                     loading="lazy">
+                  {{ else }}
+                     <img class="rounded float-left mr-3" 
+                     src="/img/blog-single.jpg" alt="" width="100%"
+                     data-sizes="auto"
+                     width="70"
+                     height="70"
+                     loading="lazy">
+                  {{ end }}
+                  <h6 class="mb-1">{{ .Title }}</h6>
+                  <small class="text-secondary">{{.Date.Format "2006-01-02"}} · {{ .ReadingTime}} minutes read</small>
+               </div>
+            </div></a
+            >
             {{ end }}
-         </li>
+         </ul>
+      </div>
+   </div>
+   <div class="widget">
+      <ul class="list-group">
+         {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+         <a
+         href="/tags/{{ .Name | urlize }}"
+         class="list-group-item list-group-item-action"
+         >
+         <div class="row">
+            <div class="col-12">
+               <h6 class="mb-1">{{ .Name }} ({{ .Count }})</h6>
+            </div>
+         </div></a
+         >
+         {{ end }}
       </ul>
    </div>
-   <!-- /post meta -->
-   <div class="post-content">
-      {{ if $featured_image }}
-         <img class="img-fluid" src="{{ .Site.Params.cloudfront }}/images/{{ $featured_image }}" alt="" width="100%">
-      {{ else }}
-         <img class="img-fluid" src="/img/blog-single.jpg" alt="" width="100%">
-      {{ end }}
-      <p></p>
-      {{ .Content }}
-   </div>
-   <!-- /post -->
-</div>
-<div class="singlepost">
-      {{ template "_internal/disqus.html" . }}
-</div>
+</aside>

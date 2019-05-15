@@ -103,7 +103,7 @@ article.blog figure img:hover {
   }
 }
 article.blog .post_info {
-  padding: 15px 20px  20px 20px;
+  padding: 15px 20px 20px 20px;
   position: relative;
   box-sizing: border-box;
 }
@@ -114,7 +114,7 @@ article.blog .post_info small {
   font-size: 0.8125rem;
 }
 article.blog .post_info h2 {
-   font-weight: 700!important;
+  font-weight: 700 !important;
   font-size: 19px;
 }
 article.blog .post_info h2 a {
@@ -133,7 +133,7 @@ article.blog .post_info ul {
 article.blog .post_info ul li {
   display: inline-block;
   position: relative;
-  padding: 12px 0  0 50px;
+  padding: 12px 0 0 50px;
   font-weight: 500;
   font-size: 12px;
   font-size: 0.75rem;
@@ -242,13 +242,25 @@ article.blog .post_info ul li:last-child i {
 .widget-title {
   padding: 15px 0;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  padding: 3rem !important;
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 .widget-title h4 {
   padding: 0;
   margin: 0;
   font-weight: 500;
-  line-height: 1;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -329,7 +341,7 @@ article.blog .post_info ul li:last-child i {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  padding: 3rem!important;
+  padding: 3rem !important;
   margin-bottom: 25px;
   position: relative;
   display: flex;
@@ -337,8 +349,8 @@ article.blog .post_info ul li:last-child i {
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 .singlepost figure {
   margin: -30px -30px 30px -30px;
@@ -347,7 +359,7 @@ article.blog .post_info ul li:last-child i {
   font-size: 28px;
   font-size: 2.125rem;
   font-weight: bold;
-  font-family: Lato,"PT Sans",Roboto,sans-serif;
+  font-family: Lato, "PT Sans", Roboto, sans-serif;
 }
 @media (max-width: 767px) {
   .singlepost h1 {
@@ -357,20 +369,21 @@ article.blog .post_info ul li:last-child i {
 }
 
 .singlepost h2 {
-   font-family: Lato,"PT Sans",Roboto,sans-serif;
-    margin: 1.5rem 0;
-    font-weight: 700;
+  font-family: Lato, "PT Sans", Roboto, sans-serif;
+  margin: 1.5rem 0;
+  font-weight: 700;
 }
 
 .singlepost p {
   line-height: 1.8;
 }
 
-.singlepost .post-content{
-   font-family: Georgia,"Times New Roman",Times,Merriweather,Cambria,Times,serif;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    letter-spacing: .01rem;
+.singlepost .post-content {
+  font-family: Georgia, "Times New Roman", Times, Merriweather, Cambria, Times,
+    serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
 }
 .postmeta {
   padding-bottom: 10px;
@@ -467,7 +480,8 @@ article.blog .post_info ul li:last-child i {
   border: 1px solid #ededed;
 }
 
-.comment_right:after, .comment_right:before {
+.comment_right:after,
+.comment_right:before {
   right: 100%;
   top: 30px;
   border: solid transparent;
