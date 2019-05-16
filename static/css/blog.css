@@ -121,7 +121,7 @@ article.blog .post_info h2 a {
   color: #333;
 }
 article.blog .post_info h2 a:hover {
-  color: #f7941d;
+  color: #303f9f;
 }
 article.blog .post_info ul {
   margin: 0 -30px 0 -30px;
@@ -225,7 +225,7 @@ article.blog .post_info ul li:last-child i {
   color: #555;
 }
 .comments-list h3 a:hover {
-  color: #f7941d;
+  color: #303f9f;
 }
 .comments-list li {
   margin-bottom: 10px;
@@ -283,7 +283,7 @@ article.blog .post_info ul li:last-child i {
   color: #555;
 }
 .widget ul.cats a:hover {
-  color: #f7941d;
+  color: #303f9f;
 }
 .widget ul.cats a span {
   position: absolute;
@@ -304,7 +304,7 @@ article.blog .post_info ul li:last-child i {
   color: #333;
 }
 .tags a:hover {
-  background-color: #f7941d;
+  background-color: #303f9f;
   color: #fff;
 }
 
@@ -316,7 +316,7 @@ article.blog .post_info ul li:last-child i {
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #f7941d;
+  background-color: #303f9f;
   color: #fff;
   font-weight: 500;
   height: 32px;
@@ -385,6 +385,9 @@ article.blog .post_info ul li:last-child i {
   line-height: 1.5;
   letter-spacing: 0.01rem;
 }
+.singlepost .post-content a {
+   color: #000000;
+}
 .postmeta {
   padding-bottom: 10px;
 }
@@ -401,12 +404,12 @@ article.blog .post_info ul li:last-child i {
   color: #777;
 }
 .postmeta ul li a:hover {
-  color: #f7941d;
+  color: #303f9f;
 }
 
 .dropcaps p:first-child::first-letter {
   color: #fff;
-  background-color: #f7941d;
+  background-color: #303f9f;
   float: left;
   font-size: 64px;
   font-size: 4rem;

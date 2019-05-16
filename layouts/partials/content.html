@@ -13,7 +13,7 @@
          <ul>
             <li>
                {{ range .Params.tags }}
-                  <span class="badge badge-success"> #<a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{- . -}}</a></span>
+                  <span class="badge badge-success"> <a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{- . -}}</a></span>
                {{ end }}
             </li>
          </ul>
@@ -21,17 +21,16 @@
       <!-- /post meta -->
       <div class="post-content">
          {{ if $featured_image }}
-            <img class="img-fluid" src="{{ .Site.Params.cloudfront }}/images/{{ $featured_image }}" alt="" width="100%">
+            <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" width="100%">
          {{ else }}
             <img class="img-fluid" src="/img/blog-single.jpg" alt="" width="100%">
          {{ end }}
          <p></p>
          {{ .Content }}
       </div>
-      <hr />
       <div class="post-content">
          <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                {{ with .PrevInSection }}
                   <a class="previous" href="{{.Permalink}}"><- {{.Title}}</a>
                {{ end }}
@@ -40,8 +39,7 @@
                {{ with .NextInSection }}
                   <a class="next" href="{{.Permalink}}"> {{.Title}} -></a>
                {{ end }}
-            </div>
-            <ul>
+            </div> -->
          </div>
       </div>
       <!-- /post -->
@@ -63,10 +61,10 @@
             >
             <div class="row">
                <div class="col-12">
-                  {{ if .Params.images }}
+                  {{ if .Params.thumbnail }}
                      <img 
                      class="rounded float-left mr-3" 
-                     src="{{ .Site.Params.cloudfront }}/images/{{ .Params.images }}" 
+                     src="{{ .Site.Params.cloudfront }}images/{{ .Params.thumbnail }}" 
                      data-sizes="auto"
                      width="70"
                      height="70"

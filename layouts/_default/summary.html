@@ -6,7 +6,7 @@
       <figure>
          <a href="{{ .Permalink }}">
             {{ if $featured_image }}
-               <img src="{{ .Site.Params.cloudfront }}/images/{{ $featured_image }}" alt="" height="100%">
+               <img src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" height="100%">
             {{ else }}
                <img src="/img/no-photo.jpg" alt="" height="100%">
             {{ end }}

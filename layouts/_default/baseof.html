@@ -6,22 +6,24 @@
 
    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
    
-   <link href="{{ .Site.Params.cloudfront }}/css/bootstrap.min.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}/css/style.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}/css/color-orange.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}/css/vendors.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}/css/prism.css" rel="stylesheet">
+   {{ $url := .Site.BaseURL }}
+   {{ if eq (getenv "HUGO_ENV") "production" }}
+      {{ $url := .Site.Params.cloudfront }}
+   {{ end }}
+
+   <link href="{{ $url }}css/bootstrap.min.css" rel="stylesheet">
+   <link href="{{ $url }}css/style.css" rel="stylesheet">
+   <link href="{{ $url }}css/color-orange.css" rel="stylesheet">
+   <link href="{{ $url }}css/prism.css" rel="stylesheet">
    <link type="textcss" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
    <!-- YOUR CUSTOM CSS -->
-   <link href="{{ .Site.Params.cloudfront }}/css/blog.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}/css/custom.css" rel="stylesheet">
-   
-   {{- partial "head.html" . -}}
+   <link href="{{ $url }}css/blog.css" rel="stylesheet">
+   <link href="{{ $url }}css/custom.css" rel="stylesheet">
    
    <body>
       <div id="page">
-         <header class="header_in is_sticky menu_fixed">
+         <header class="header_in is_sticky menu_fixed justify-content-between">
             {{- partial "header.html" . -}}
          </header>
          <main>

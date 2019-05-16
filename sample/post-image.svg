@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg4554"
+   width="900"
+   height="450"
+   viewBox="0 0 900 450"
+   sodipodi:docname="post-image.svg"
+   inkscape:version="0.92.4 (unknown)"
+   inkscape:export-filename="/home/ihsan/Documents/htdocs/quickstart/static/images/cpp-programming.png"
+   inkscape:export-xdpi="96.639999"
+   inkscape:export-ydpi="96.639999">
+  <metadata
+     id="metadata4560">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4558" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="708"
+     id="namedview4556"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.84222222"
+     inkscape:cx="450"
+     inkscape:cy="177.5066"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4554">
+    <sodipodi:guide
+       position="91.424802,198.28496"
+       orientation="0,1"
+       id="guide4586"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="439.31398,280.21108"
+       orientation="1,0"
+       id="guide4588"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="439.31398,112.79683"
+       orientation="1,0"
+       id="guide4590"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="477.30871,235.09235"
+       orientation="0,1"
+       id="guide4596"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="650.65963,198.28496"
+       orientation="0,1"
+       id="guide4598"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <rect
+     style="opacity:1;fill:#487eb0;fill-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+     id="rect4564"
+     width="900"
+     height="450"
+     x="4.4035104e-09"
+     y="-5.6364922e-07" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:237.75242615px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.94381094"
+     x="222.16959"
+     y="337.40161"
+     id="text4568"
+     transform="scale(1.0728033,0.93213733)"><tspan
+       sodipodi:role="line"
+       id="tspan4566"
+       x="222.16959"
+       y="337.40161"
+       style="fill:#ffffff;stroke-width:5.94381094">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:72.86029816px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.82150757"
+     x="375.48499"
+     y="227.23639"
+     id="text4582"><tspan
+       sodipodi:role="line"
+       id="tspan4580"
+       x="375.48499"
+       y="227.23639"
+       style="fill:#ffffff;stroke-width:1.82150757">++</tspan><tspan
+       sodipodi:role="line"
+       x="375.48499"
+       y="318.31177"
+       id="tspan4584"
+       style="fill:#ffffff;stroke-width:1.82150757" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="377.69922"
+     y="274.27441"
+     id="text4594"><tspan
+       sodipodi:role="line"
+       id="tspan4592"
+       x="377.69922"
+       y="274.27441">PROGRAMMING</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.15989113px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;opacity:0.29100001;fill:#ececec;fill-opacity:1;stroke:none;stroke-width:0.70399731"
+     x="453.87234"
+     y="302.9725"
+     id="text4602"><tspan
+       sodipodi:role="line"
+       id="tspan4600"
+       x="453.87234"
+       y="302.9725"
+       style="fill:#ececec;stroke-width:0.70399731">santekno.com</tspan></text>
+</svg>

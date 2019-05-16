@@ -99,7 +99,7 @@ Author URI: http://themeforest.net/user/Ansonika/
   }
 
   header.sticky .main-menu > ul > li span > a, header.header_in .main-menu > ul > li span > a {
-    color: #444;
+    color: #fff;
   }
   header.sticky .main-menu > ul > li span:hover > a, header.header_in .main-menu > ul > li span:hover > a {
     opacity: 1;
@@ -831,13 +831,13 @@ header.header_in {
   padding: 10px 0;
   background-color: #fff;
   position: relative;
-  border-bottom: 1px solid #ddd;
 }
 header.header_in.is_sticky {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+  background: #303f9f;
 }
 header.header_in.map_view {
   position: fixed;
@@ -6497,102 +6497,6 @@ a.btn_3, .btn_3 {
   z-index: -1;
 }
 
-.clear:after, .pagination:after, .clear:before, .pagination:before {
-  content: "";
-  display: table;
-}
-.clear:after, .pagination:after {
-  clear: both;
-}
-
-.pagination__wrapper {
-  height: 50px;
-  padding-top: 10px;
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-.pagination__wrapper:before {
-  top: -1px;
-}
-.pagination__wrapper:after {
-  bottom: -1px;
-}
-
-@keyframes hoverAnimation {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.pagination {
-  display: inline-block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.pagination li {
-  display: block;
-  float: left;
-  padding: 5px;
-}
-.pagination li:first-child {
-  border: none;
-}
-.pagination a,
-.pagination span {
-  background: none;
-  border: none;
-  border-radius: 50%;
-  box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.6);
-  display: block;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  min-width: 40px;
-  padding: 0;
-}
-.pagination a {
-  outline: none;
-  position: relative;
-  transition: all 170ms linear;
-}
-.pagination a:before {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  content: "";
-  cursor: pointer;
-  height: 0;
-  left: 50%;
-  opacity: 0;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  transition: all 170ms linear;
-  top: 50%;
-  width: 0;
-}
-.pagination a:hover:not(.active) {
-  color: black;
-}
-.pagination a:hover:not(.active):before {
-  animation: hoverAnimation 510ms linear forwards;
-  height: 40px;
-  width: 40px;
-}
-.pagination a.active {
-  background: #004dda;
-  color: white;
-  cursor: default;
-}
-.pagination .prev,
-.pagination .next {
-  font-size: 14px;
-}
-
 .box_faq {
   position: relative;
   padding-left: 50px;
@@ -7667,7 +7571,7 @@ a.social_bt.google:before {
 }
 
 .orange {
-  background: #f7941d;
+  background: #303f9f;
 }
 
 .beige {
