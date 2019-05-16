@@ -1464,8 +1464,8 @@ ul#additional_links li:after {
   }
 }
 .hero_single.version_3 {
-  height: 450px;
-  background: #222 url(../img/home_section_1.jpg) center center no-repeat;
+  height: 300px;
+  background-color: #343a40 !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
