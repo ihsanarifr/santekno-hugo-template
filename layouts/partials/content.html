@@ -21,7 +21,11 @@
       <!-- /post meta -->
       <div class="post-content">
          {{ if $featured_image }}
-            <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" width="100%">
+            {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+               <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" width="100%">
+            {{ else }}
+               <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="" width="100%">
+            {{ end }}
          {{ else }}
             <img class="img-fluid" src="/img/blog-single.jpg" alt="" width="100%">
          {{ end }}
@@ -62,6 +66,7 @@
             <div class="row">
                <div class="col-12">
                   {{ if .Params.thumbnail }}
+                     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
                      <img 
                      class="rounded float-left mr-3" 
                      src="{{ .Site.Params.cloudfront }}images/{{ .Params.thumbnail }}" 
@@ -69,6 +74,15 @@
                      width="70"
                      height="70"
                      loading="lazy">
+                     {{ else }}
+                     <img 
+                     class="rounded float-left mr-3" 
+                     src="{{ .Site.BaseURL }}images/{{ .Params.thumbnail }}" 
+                     data-sizes="auto"
+                     width="70"
+                     height="70"
+                     loading="lazy">
+                     {{ end }}
                   {{ else }}
                      <img class="rounded float-left mr-3" 
                      src="/img/blog-single.jpg" alt="" width="100%"
