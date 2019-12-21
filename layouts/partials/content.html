@@ -22,19 +22,19 @@
       <div class="post-content">
          {{ if $featured_image }}
             {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-               <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" width="100%">
+               <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" style="height:100%;width:100%;">
             {{ else }}
-               <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="" width="100%">
+               <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="" style="height:100%;width:100%;">
             {{ end }}
          {{ else }}
-            <img class="img-fluid" src="/img/blog-single.jpg" alt="" width="100%">
+            <img class="img-fluid" src="/img/blog-single.jpg" alt="" style="height:100%;width:100%;">
          {{ end }}
          <p></p>
          {{ .Content }}
       </div>
       <div class="post-content">
          <div class="row">
-            <!-- <div class="col-md-6">
+            <div class="col-md-6">
                {{ with .PrevInSection }}
                   <a class="previous" href="{{.Permalink}}"><- {{.Title}}</a>
                {{ end }}
@@ -43,7 +43,7 @@
                {{ with .NextInSection }}
                   <a class="next" href="{{.Permalink}}"> {{.Title}} -></a>
                {{ end }}
-            </div> -->
+            </div>
          </div>
       </div>
       <!-- /post -->

@@ -39,8 +39,13 @@
       </div>
    </body>
    <div id="toTop"></div><!-- Back to top button -->
-   <script src="https://ddth2wdm6pubv.cloudfront.net/public/js/common_scripts.js"></script>
-	<script src="https://ddth2wdm6pubv.cloudfront.net/public/js/functions.js"></script>
-   <script src="https://ddth2wdm6pubv.cloudfront.net/public/assets/validate.js"></script>
-   <script src="/js/prism.js"></script>
+   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+   <script src="{{ .Site.Params.cloudfront }}js/common_scripts.js"></script>
+   <script src="{{ .Site.Params.cloudfront }}js/validate.js"></script>
+   <script src="{{ .Site.Params.cloudfront }}js/prism.js"></script>
+   {{ else }}
+   <script src="{{ .Site.BaseURL }}js/common_scripts.js"></script>
+   <script src="{{ .Site.BaseURL }}js/validate.js"></script>
+   <script src="{{ .Site.BaseURL }}js/prism.js"></script>
+   {{ end }}
 </html>

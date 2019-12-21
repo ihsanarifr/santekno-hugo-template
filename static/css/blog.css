@@ -341,7 +341,7 @@ article.blog .post_info ul li:last-child i {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  padding: 3rem !important;
+  padding: 1.3rem !important;
   margin-bottom: 25px;
   position: relative;
   display: flex;
