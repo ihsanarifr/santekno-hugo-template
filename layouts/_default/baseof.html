@@ -9,7 +9,6 @@
    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
    <link href="{{ .Site.Params.cloudfront }}css/bootstrap.min.css" rel="stylesheet">
    <link href="{{ .Site.Params.cloudfront }}css/style.css" rel="stylesheet">
-   <link href="{{ .Site.Params.cloudfront }}css/color-orange.css" rel="stylesheet">
    <link href="{{ .Site.Params.cloudfront }}css/prism.css" rel="stylesheet">
    <!-- YOUR CUSTOM CSS -->
    <link href="{{ .Site.Params.cloudfront }}css/blog.css" rel="stylesheet">
@@ -17,7 +16,6 @@
    {{ else }}
    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
    <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
-   <link href="{{ .Site.BaseURL }}css/color-orange.css" rel="stylesheet">
    <link href="{{ .Site.BaseURL }}css/prism.css" rel="stylesheet">
    <!-- YOUR CUSTOM CSS -->
    <link href="{{ .Site.BaseURL }}css/blog.css" rel="stylesheet">
