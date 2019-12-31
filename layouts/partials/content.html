@@ -49,7 +49,9 @@
       <!-- /post -->
    </div>
    <div class="singlepost">
+         {{ if and (.Site.DisqusShortname) (ne .Params.comments false) }}
          {{ template "_internal/disqus.html" . }}
+         {{ end }}
    </div>
 </div>
 
