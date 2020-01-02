@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
    <head>
-   {{ partial "head-meta.html" . }}
-      <link rel="canonical" href="{{ .Permalink }}">
-      <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+      {{ partial "head-meta.html" . }}
+      <title>{{ .Title | default .Site.Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>
       {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       <link href="{{ .Site.Params.cloudfront }}css/bootstrap.min.css" rel="stylesheet">
       <link href="{{ .Site.Params.cloudfront }}css/style.css" rel="stylesheet">
@@ -25,13 +24,13 @@
    <body>
       <div id="page">
          <header class="header_in is_sticky menu_fixed justify-content-between">
-            {{- partial "header.html" . -}}
+            {{ partial "header.html" . }}
          </header>
          <main>
-            {{- block "main" . }}{{- end }}
+            {{ block "main" . }}{{ end }}
          </main>
          <footer>
-            {{- partial "footer.html" . -}}
+            {{ partial "footer.html" . }}
          </footer>
       </div>
    </body>

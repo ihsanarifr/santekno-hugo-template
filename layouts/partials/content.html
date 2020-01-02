@@ -13,7 +13,7 @@
          <ul>
             <li>
                {{ range .Params.tags }}
-                  <span class="badge badge-success"> <a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{- . -}}</a></span>
+                  <span class="badge badge-success"> <a class="text-white" href="{{ "/topik/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></span>
                {{ end }}
             </li>
          </ul>

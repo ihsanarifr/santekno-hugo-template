@@ -316,10 +316,6 @@ h6 {
   color: #333;
 }
 
-p {
-  margin-bottom: 30px;
-}
-
 strong {
   font-weight: 600;
 }
@@ -332,12 +328,6 @@ label {
 hr {
   margin: 30px 0 30px 0;
   border-color: #ddd;
-}
-
-ul, ol {
-  list-style: none;
-  margin: 0 0 25px 0;
-  padding: 0;
 }
 
 .main_title {

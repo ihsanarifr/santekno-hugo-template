@@ -370,7 +370,7 @@ article.blog .post_info ul li:last-child i {
 
 .singlepost h2 {
   font-family: Lato, "PT Sans", Roboto, sans-serif;
-  margin: 0.7rem 0;
+  margin: 1.7rem 0;
   font-weight: 700;
 }
 
@@ -527,3 +527,8 @@ article.blog .post_info ul li:last-child i {
   padding: 0 10px;
 }
 
+.list-group ul {
+  list-style: none;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
