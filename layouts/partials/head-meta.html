@@ -7,12 +7,12 @@
       <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
       {{if isset .Params "keywords"}}
-      <meta name="keywords" content="{{ delimit .Keywords ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Sofware, Networking, Programming, Sains Teknologi" />
+      <meta name="keywords" content="{{ delimit .Keywords ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
       {{else}}
       {{if isset .Params "tags"}}
-      <meta name="keywords" content="{{ delimit .Params.Tags ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Sofware, Networking, Programming, Sains Teknologi" />
+      <meta name="keywords" content="{{ delimit .Params.Tags ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
       {{else}}
-      <meta name="keywords" content="Berbagi Seputar Android, Gadget, Hardware, Linux, Sofware, Networking, Programming, Sains Teknologi" />
+      <meta name="keywords" content="Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
       {{end}}
       {{end}}
 
