@@ -383,6 +383,7 @@ article.blog .post_info ul li:last-child i {
 
 .singlepost p {
   line-height: 1.8;
+  text-align: justify;
 }
 
 .singlepost .post-content {

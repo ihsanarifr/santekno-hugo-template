@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Lang }}">
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
    <head>
       {{ partial "head-meta.html" . }}
       <title>{{ .Title | default .Site.Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>

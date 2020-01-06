@@ -4246,35 +4246,25 @@ section#reviews {
 
 .box_detail {
   background-color: #fff;
-  padding: 25px 25px 15px 25px;  
+  padding: 15px 15px 10px 15px;  
   border-radius: 4px;
   border: 1px solid rgba(0,0,0,.125);
   margin-bottom: 30px;
 }
-.box_detail .price {
-  line-height: 1;
-  border-bottom: 1px solid #ddd;
-  margin: 0 -25px 25px -25px;
-  padding: 0 25px 15px 25px;
+.box_detail nav{
+  padding: 0;
 }
-.box_detail .price > span {
-  font-size: 31px;
-  font-size: 1.9375rem;
-  font-weight: 600;
+.box_detail h2 {
+  font-size: 30px;
 }
-.box_detail .price > span > small {
-  font-size: 11px;
-  font-size: 0.6875rem;
-  font-weight: 500;
-}
-.box_detail .price .score {
-  float: right;
-  margin-top: -5px;
+.box_detail hr {
+  margin: 10px 0 10px 0;
+  border-color: #ddd;
 }
 .box_detail h3 {
   font-size: 20px;
   font-size: 1.25rem;
-  margin: 25px 0 10px 0;
+  margin: 15px 0 10px 0;
 }
 .box_detail ul {
   margin-bottom: 0;
