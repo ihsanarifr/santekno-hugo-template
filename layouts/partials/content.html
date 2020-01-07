@@ -24,10 +24,10 @@
             {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
                <img class="img-fluid" src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="" style="height:100%;width:100%;">
             {{ else }}
-               <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="" style="height:100%;width:100%;">
+               <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="{{ .Title }}" style="height:100%;width:100%;">
             {{ end }}
          {{ else }}
-            <img class="img-fluid" src="/img/blog-single.jpg" alt="" style="height:100%;width:100%;">
+            <img class="img-fluid" src="/img/blog-single.jpg" alt="{{ .Title }}" style="height:100%;width:100%;">
          {{ end }}
          <p></p>
          {{ .Content }}
