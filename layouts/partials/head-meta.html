@@ -5,27 +5,26 @@
       <meta name="author" content="santekno.com">
       <meta name="title" content="{{ .Title | default .Site.Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}" />
       <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-
-      {{if isset .Params "keywords"}}
+      {{- if isset .Params "keywords" -}}
       <meta name="keywords" content="{{ delimit .Keywords ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
-      {{else}}
-      {{if isset .Params "tags"}}
+      {{- else -}}
+      {{- if isset .Params "tags" -}}
       <meta name="keywords" content="{{ delimit .Params.Tags ", " }}, Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
-      {{else}}
+      {{- else -}}
       <meta name="keywords" content="Berbagi Seputar Android, Gadget, Hardware, Linux, Software, Networking, Programming, Sains Teknologi" />
-      {{end}}
-      {{end}}
+      {{- end -}}
+      {{- end -}}
 
-      {{ if and (eq .Kind "taxonomy") (eq .Type "categories")}}
+      {{- if and (eq .Kind "taxonomy") (eq .Type "categories") -}}
       <meta name="robots" content="noindex, follow"/>
-      {{ else }}
+      {{- else -}}
       <meta name="robots" content="index, follow"/>
-      {{ end }}
+      {{- end -}}
 
-      {{ if or (eq .Kind "home") (eq .Kind "page")}}
-      {{ if isset .Params "canonical" }}
+      {{- if or (eq .Kind "home") (eq .Kind "page") -}}
+      {{- if isset .Params "canonical" -}}
       <link rel="canonical" href="{{ .Params.Canonical}}" />
-      {{ else }}
+      {{- else -}}
       <link rel="canonical" href="{{ .Permalink}}" />
-      {{ end }}
-      {{ end }}
+      {{- end -}}
+      {{- end -}}
