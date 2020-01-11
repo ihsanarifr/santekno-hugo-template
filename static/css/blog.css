@@ -370,8 +370,17 @@ article.blog .post_info ul li:last-child i {
 
 .singlepost h2 {
   font-family: Lato, "PT Sans", Roboto, sans-serif;
-  margin: 1.7rem 0;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+  font-size: 1.5em;
   font-weight: 700;
+}
+
+.singlepost .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
 }
 
 .singlepost h3 {
@@ -383,7 +392,6 @@ article.blog .post_info ul li:last-child i {
 
 .singlepost p {
   line-height: 1.8;
-  text-align: justify;
 }
 
 .singlepost .post-content {
@@ -392,9 +400,13 @@ article.blog .post_info ul li:last-child i {
   font-size: 1.125rem;
   line-height: 1.5;
   letter-spacing: 0.01rem;
+  text-align: justify;
 }
 .singlepost .post-content a {
-   color: #000000;
+   color: #2980b9;
+}
+.singlepost .post-content ul{
+  text-align: left;
 }
 .postmeta {
   padding-bottom: 10px;

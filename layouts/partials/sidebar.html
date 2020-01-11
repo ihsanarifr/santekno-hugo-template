@@ -5,7 +5,7 @@
       </div>
       <ul>
          {{ range where .Site.Pages "Section" "post" | first 5 }}
-         <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action">
+         <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action" title="{{ .Title }}">
             <div class="row">
                <div class="col-12">
                   {{ if .Params.thumbnail }}
@@ -32,7 +32,7 @@
 <div class="widget">
    <ul class="list-group">
       {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-      <a href="/tags/{{ .Name | urlize }}" class="list-group-item list-group-item-action">
+      <a href="/tags/{{ .Name | urlize }}" class="list-group-item list-group-item-action" title="{{ .Name }}">
          <div class="row">
             <div class="col-12">
                <h6 class="mb-1">{{ .Name }} ({{ .Count }})</h6>
