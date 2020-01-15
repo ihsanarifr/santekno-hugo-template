@@ -24,3 +24,7 @@
       <link rel="canonical" href="{{ .Permalink}}" />
       {{ end }}
       {{ end }}
+
+      {{ if .Site.Params.favicon }}
+      <link rel="icon" type="image/png" href="/images/{{ .Site.Params.favicon }}" />
+      {{ end }}
