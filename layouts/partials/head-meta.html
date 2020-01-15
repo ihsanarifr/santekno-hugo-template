@@ -15,11 +15,7 @@
       {{ end }}
       {{ end }}
 
-      {{ if and (eq .Kind "taxonomy") (eq .Type "categories") }}
-      <meta name="robots" content="noindex, follow"/>
-      {{ else }}
       <meta name="robots" content="index, follow"/>
-      {{ end }}
 
       {{ if or (eq .Kind "home") (eq .Kind "page") }}
       {{ if isset .Params "canonical" }}
