@@ -1,12 +1,19 @@
+{{ define "title" }}{{ .Title | markdownify }} - {{ .Site.Title }}{{ end }}
+
 {{ define "main"}}
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title">Page Not Found</h2>
-  </header>
-  <p>Page not found. Go back <a href="{{ "/" | relURL }}">home</a>.</p>
-</article> <!-- /.blog-post -->
-
+<div id="error_page">
+  <div class="">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-xl-7 col-lg-9">
+          <h2>404 <i class="icon_error-triangle_alt"></i></h2>
+          <p>Halaman yang anda kunjungi tidak ditemukan.. <br>Kembali ke <a href="{{ "/" | relURL }}"> Beranda</a></p>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /wrapper -->
+</div>
 {{ end }}
-
-{{/* vim: set ts=2 sw=2 et: */}}

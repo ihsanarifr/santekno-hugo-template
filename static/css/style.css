@@ -5738,8 +5738,8 @@ iframe#map_iframe {
 
 /*-------- 2.10 404 page --------*/
 #error_page {
-  background: #0054a6 url(../img/pattern_1.svg) center bottom repeat-x;
-  color: #fff;
+  margin-top: 200pt;
+  color: black;
   height: 600px;
 }
 @media (max-width: 767px) {
@@ -5761,7 +5761,7 @@ iframe#map_iframe {
   margin-top: 30px;
   font-size: 140px;
   font-size: 8.75rem;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1;
