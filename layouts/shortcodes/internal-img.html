@@ -1,3 +1,8 @@
-{{ $title := .Get 0 }}
-{{ $img := .Get 1 }}
-<img src="{{ .Site.BaseURL }}images/{{ $img }}" title="{{ $title }}" width="100%"/>
+{{ $title := .Get 0 }} {{ $img := .Get 1 }}
+<p>
+  <img
+    src="{{ .Site.BaseURL }}images/{{ $img }}"
+    title="{{ $title }}"
+    width="100%"
+  />
+</p>
