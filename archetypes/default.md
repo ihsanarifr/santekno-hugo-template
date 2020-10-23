@@ -1,9 +1,9 @@
-+++
-title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
-images = ["/image.jpg"]
-description = ""
-categories = ["category"]
-tags = ["tag1", "tag2"]
-draft = true
-+++
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+tags: ["tags1"]
+categories: ["category"]
+images: "tutorial-golang.png"
+thumbnail: "tutorial-golang-thumbnail.png"
+draft: false
+---

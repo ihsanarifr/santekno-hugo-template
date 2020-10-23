@@ -363,17 +363,23 @@ article.blog .post_info ul li:last-child i {
 }
 @media (max-width: 767px) {
   .singlepost h1 {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    font-size: 1.5125rem;
   }
 }
 
 .singlepost h2 {
   font-family: Lato, "PT Sans", Roboto, sans-serif;
   padding-bottom: .3em;
+  padding-top: 10px;
   border-bottom: 1px solid #eaecef;
   font-size: 1.5em;
   font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .singlepost h2 {
+    font-size: 1.4125rem;
+  }
 }
 
 .singlepost .anchor {
