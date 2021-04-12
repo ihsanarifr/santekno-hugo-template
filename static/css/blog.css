@@ -357,15 +357,18 @@ article.blog .post_info ul li:last-child i {
     font-size: 1.125rem;
     line-height: 1.5;
     letter-spacing: .01rem;
-    text-align: justify
 }
 
 .singlepost .post-content a {
-    color: #2980b9
+    color: #2980b9;
 }
 
 .singlepost .post-content ul {
-    text-align: left
+    text-align: left;
+}
+
+.singlepost .post-content p {
+    text-align: justify;
 }
 
 .postmeta {
