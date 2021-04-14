@@ -11,14 +11,14 @@
                   {{ if .Params.thumbnail }}
                   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
                   <img class="rounded float-left mr-3" src="{{ .Site.Params.cloudfront }}images/{{ .Params.thumbnail }}"
-                     alt="{{ .Title }}" data-sizes="auto" width="70" height="70" loading="lazy">
+                     alt="{{ .Title }}" data-sizes="auto" width="70" height="70"  class="lazyload">
                   {{ else }}
                   <img class="rounded float-left mr-3" src="{{ .Site.BaseURL }}images/{{ .Params.thumbnail }}"
-                     alt="{{ .Title }}" data-sizes="auto" width="70" height="70" loading="lazy">
+                     alt="{{ .Title }}" data-sizes="auto" width="70" height="70"  class="lazyload">
                   {{ end }}
                   {{ else }}
                   <img class="rounded float-left mr-3" src="/img/blog-single.jpg" alt="{{ .Title }}" width="100%"
-                     data-sizes="auto" width="70" height="70" loading="lazy">
+                     data-sizes="auto" width="70" height="70"  class="lazyload">
                   {{ end }}
                   <h6 class="mb-1">{{ .Title }}</h6>
                   <small class="text-secondary">{{.Date.Format "2006-01-02"}} · {{ .ReadingTime}} minutes read</small>

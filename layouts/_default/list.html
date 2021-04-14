@@ -10,13 +10,13 @@
                   {{ if $featured_image }}
                   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
                   <img src="{{ .Site.Params.cloudfront }}images/{{ $featured_image }}" alt="{{ .Title }}"
-                     style="height:100%;width:100%;">
+                     style="height:100%;width:100%;" class="lazyload">
                   {{ else }}
                   <img src="{{ .Site.BaseURL }}images/{{ $featured_image }}" alt="{{ .Title }}"
-                     style="height:100%;width:100%;">
+                     style="height:100%;width:100%;" class="lazyload">
                   {{ end }}
                   {{ else }}
-                  <img src="/img/no-photo.jpg" alt="{{ .Title }}" style="height:100%;width:100%;">
+                  <img src="/img/no-photo.jpg" alt="{{ .Title }}" style="height:100%;width:100%;" class="lazyload">
                   {{ end }}
                   <div class="preview"><span>Read more</span></div>
                </a>
