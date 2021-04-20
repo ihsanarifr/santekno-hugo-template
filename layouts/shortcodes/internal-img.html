@@ -1,9 +1,8 @@
 {{ $title := .Get 0 }} {{ $img := .Get 1 }}
-<p>
+<p style="text-align: center">
   <img
     src="{{ .Site.BaseURL }}images/{{ $img }}"
     title="{{ $title }}"
-    width="100%"
     class="lazyload"
   />
 </p>
