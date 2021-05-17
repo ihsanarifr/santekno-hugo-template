@@ -14,6 +14,11 @@
             </div>
          </div>
       </div>
+      <div class="container container margin_60_55">
+         <div class="row">
+               {{ partial "list-group.html" . }}
+         </div>
+      </div>
    {{ else }}
       {{ .Render "content" }}
    {{ end }}

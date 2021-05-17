@@ -12,7 +12,7 @@
             {{ range .Site.Menus.main }}
                {{ $text := print .Name | safeHTML }}
                <li class="nav-item">
-                  <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
+                  <a class="nav-link" href="{{ .URL }}">{{ .Pre }}&nbsp;{{ $text }}</a>
                </li>
             {{ end }}
          </ul>

@@ -1,0 +1,30 @@
+{{ range $taxonomy:= first 3 .Site.Taxonomies.tags.ByCount }}
+<div class="col-md-4">
+  <ul class="list-group">
+    <a
+      href="/tags/{{ .Name | urlize }}"
+      class="list-group-item list-group-item-action"
+      title="{{ .Name }}"
+    >
+      <div class="row">
+        <div class="col-12">
+          <h6 class="mb-1"><b>{{ .Name }}</b></h6>
+        </div>
+      </div>
+    </a>
+    {{ range first 10 $taxonomy.Pages }}
+    <a
+      href="{{ .Permalink }}"
+      class="list-group-item list-group-item-action"
+      title="{{ .LinkTitle }}"
+    >
+      <div class="row">
+        <div class="col-12">
+          <h6 class="mb-1">{{ .LinkTitle}}</h6>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
